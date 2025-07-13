@@ -108,53 +108,6 @@
     .payment-methods input {
       margin-right: 10px;
     }
-    @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    padding: 6px 10px;
-  }
-
-  .section {
-    padding: 20px 10px;
-    margin: 20px 10px;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card img {
-    height: auto;
-  }
-
-  .apply-button {
-    font-size: 0.95rem;
-    padding: 10px 20px;
-    width: 90%;
-    margin: 20px auto;
-  }
-
-  footer {
-    font-size: 0.85rem;
-    padding: 15px 10px;
-  }
-}
-
   </style>
 </head>
 <body>
@@ -212,11 +165,20 @@
     <label for="instagram"><strong>Instagram Handle (Optional):</strong></label>
     <input type="text" id="instagram" name="instagram" placeholder="@yourhandle">
 
-    <p style="font-weight: bold; margin-top: 30px; color: #d32f2f; font-size: 1.2rem; background: #fff3cd; padding: 10px; border-left: 5px solid #ffc107;">
-      Registration Fee: ₹500 (to be paid using any method below)
-    </p>
-
+   
     <h3 style="color: #2a5298;">Select Payment Method</h3>
+    <label for="amount" style="color: #d32f2f;">Select Amount</label>
+      <select id="amount" name="amount" required style="font-size: larger;">
+        <option value="" disabled selected>Select Amount</option>
+        <option value="500">₹500/-</option>
+        <option value="999">₹999/-</option>
+        <option value="1200">₹1200/-</option>
+        <option value="1999">₹1999/-</option>
+        <option value="3999">₹3999/-</option>
+        <option value="5999">₹5999/-</option>
+        <option value="8999">₹8999/-</option>
+        <option value="11999">₹11999/-</option>
+      </select>
     <div class="payment-methods" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
       <label style="border: 2px solid #2a5298; border-radius: 8px; padding: 10px; font-weight: bold;">
         <input type="radio" name="payment" value="gpay" onclick="showDetails('gpay')" required> Google Pay
